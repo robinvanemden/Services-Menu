@@ -1,0 +1,4 @@
+
+Menu Service 7.x-1.x, 2011-06-24
+--------------------------------
+Initial submit of menu_service module. 

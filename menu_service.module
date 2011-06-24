@@ -1,0 +1,75 @@
+<?php
+// $Id$
+
+/**
+ * Implementation of hook_permissions().
+ */
+function menu_service_permissions() {
+  return array(
+    'menu service view menu' => array(
+      'title' => t('View menu'),
+    ),
+  );
+}
+
+/**
+ * Gets a menu object by name.
+ *
+ * @param string $menu_name
+ * @return object
+ */
+function menu_service_get_menu($menu_name) {
+  $data = (object) menu_build_tree($menu_name);
+  return $data;
+}
+
+/**
+ * Implementation of hook_services_resources().
+ */
+function menu_service_services_resources() {
+  return array(
+   'menu' => array(
+     'retrieve' => array(
+       'help' => 'Retrieves a menu',
+       'file' => array('file' => 'inc', 'module' => 'menu_service'),
+       'callback' => '_menu_service_retrieve',
+       'access callback' => '_menu_service_access',
+       'access arguments' => array('view'),
+       'access arguments append' => TRUE,
+       'args' => array(
+         array(
+           'name' => 'menu_name',
+           'type' => 'string',
+           'description' => 'The name of the menu to get',
+           'source' => array('path' => '0'),
+           'optional' => FALSE,
+         ),
+       ),
+     ),
+   ),
+  );
+}
+
+/**
+ * Access callback for the menu resource.
+ *
+ * @param string $op
+ *  The operation that's going to be performed.
+ * @param array $args
+ *  The arguments that will be passed to the callback.
+ * @return bool
+ *  Whether access is given or not.
+ */
+function _menu_service_access($op, $args) {
+  global $user;
+  $access = FALSE;
+
+  switch ($op) {
+    case 'view':
+      $access = user_access('menu service view menu');
+      $access = $access;
+      break;
+  }
+
+  return $access;
+}
