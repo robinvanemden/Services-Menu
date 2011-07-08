@@ -18,5 +18,3 @@ None.
 -- INSTALLATION --
 
 * Install as usual, see http://drupal.org/node/70151 for further information.
-
-

@@ -1,0 +1,9 @@
+name = Services Menu
+description = Services Menu
+package = Services
+core = 7.x
+
+files[] = services_menu.inc
+files[] = services_menu.module
+
+dependencies[] = services

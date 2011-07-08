@@ -1,5 +1,4 @@
 <?php
-// $Id$
 
 /**
  * Callback for retrieving menu resources.
@@ -7,6 +6,6 @@
  * @param int $id
  * @return object
  */
-function _menu_service_retrieve($menu_name) {
-  return menu_service_get_menu($menu_name);
+function _services_menu_retrieve($menu_name) {
+  return services_menu_get_menu($menu_name);
 }
