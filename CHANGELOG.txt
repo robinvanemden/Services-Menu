@@ -1,9 +1,12 @@
 
+Service Menu 7.x-1.x, 2011-07-13
+================================
+#1212746 Small changes to .info
+
 Service Menu 7.x-1.x, 2011-07-08
 ================================
 #1119992 Rename menu_service to services_menu 
 Removal of $Id$
-
 
 Service Menu 7.x-1.x, 2011-06-24
 ================================
