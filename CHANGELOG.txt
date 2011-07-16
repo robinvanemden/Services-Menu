@@ -1,13 +1,16 @@
 
+Service Menu 7.x-1.x, 2011-07-16
+================================
+#1220080 by mrfelton: Incorrectly named implementation of hook_menu_permission
+
 Service Menu 7.x-1.x, 2011-07-13
 ================================
-#1212746 Small changes to .info
+#1212746 by Robin van Emden: Small changes to .info
 
 Service Menu 7.x-1.x, 2011-07-08
 ================================
-#1119992 Rename menu_service to services_menu 
-Removal of $Id$
+#1119992 by Robin van Emden: Rename menu_service to services_menu , removal of $Id$
 
 Service Menu 7.x-1.x, 2011-06-24
 ================================
-Initial submit of menu_service module. 
+By Robin van Emden: Initial submit of menu_service module. 
