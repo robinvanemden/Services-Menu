@@ -23,7 +23,7 @@ function services_menu_get_menu($menu_name) {
 }
 
 /**
- * Implementation of hook_services_resources().
+ * Implements hook_services_resources().
  */
 function services_menu_services_resources() {
   return array(
