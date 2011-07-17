@@ -27,25 +27,25 @@ function services_menu_get_menu($menu_name) {
  */
 function services_menu_services_resources() {
   return array(
-   'menu' => array(
-     'retrieve' => array(
-       'help' => 'Retrieves a menu',
-       'file' => array('file' => 'inc', 'module' => 'services_menu'),
-       'callback' => '_services_menu_retrieve',
-       'access callback' => '_services_menu_access',
-       'access arguments' => array('view'),
-       'access arguments append' => TRUE,
-       'args' => array(
-         array(
-           'name' => 'menu_name',
-           'type' => 'string',
-           'description' => 'The name of the menu to get',
-           'source' => array('path' => '0'),
-           'optional' => FALSE,
-         ),
-       ),
-     ),
-   ),
+    'menu' => array(
+      'retrieve' => array(
+        'help' => 'Retrieves a menu',
+        'file' => array('file' => 'inc', 'module' => 'services_menu'),
+        'callback' => '_services_menu_retrieve',
+        'access callback' => '_services_menu_access',
+        'access arguments' => array('view'),
+        'access arguments append' => TRUE,
+        'args' => array(
+          array(
+            'name' => 'menu_name',
+            'type' => 'string',
+            'description' => 'The name of the menu to get',
+            'source' => array('path' => '0'),
+            'optional' => FALSE,
+          ),
+        ),
+      ),
+    ),
   );
 }
 
