@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ *  Link general menu functionalities to services module.
+ */
+
+/**
  * Callback for retrieving menu resources.
  *
  * @param int $id
