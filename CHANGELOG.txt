@@ -1,5 +1,11 @@
+Service Menu 7.x-1.x, 2011-07-18
+================================
+#1212746 by ccardea: Fixed self-assigning variable
+
 Service Menu 7.x-1.x, 2011-07-17
 ================================
+#1220080 by Robin van Emden: Added a missing space indent.
+#1212746 by Robin van Emden: added @file in services_menu.inc.
 #1212746 by mrfelton: Fix for inconsistancy in the comment style for hook implementations.
 
 Service Menu 7.x-1.x, 2011-07-16
