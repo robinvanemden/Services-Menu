@@ -7,8 +7,6 @@
  * Adds path alias values
  */
 
-filters returned fields
-
 class ServicesMenu {
   public $name;
   public $tree = array();
