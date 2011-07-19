@@ -1,5 +1,5 @@
 name = Services Menu
 description = Services Menu
-package = Services - resources
+package = Services
 core = 7.x
 dependencies[] = services
