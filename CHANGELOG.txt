@@ -1,6 +1,7 @@
 Services Menu 7.x-1.x, 2011-07-18
 =================================
-#1222098 by g10: merge from github version
+#1222098 by Robin van Emden: Cleanup of merge through Coder module review
+#1222098 by g10: Merge from github version
 
 services_menu.info
 - changed package to 'Services - resources' (grouping of non-core resources)

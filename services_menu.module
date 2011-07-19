@@ -3,7 +3,7 @@
 define('SERVICES_MENU_RETRIEVE_MENU', 'services menu retrieve menu');
 
 /**
- * Implementation of hook_permission().
+ * Implements hook_permission().
  */
 function services_menu_permission() {
   return array(
@@ -11,36 +11,36 @@ function services_menu_permission() {
       'title' => t('Get menu'),
     ),
   );
-} 
+}
 
 /**
- * Implementation of hook_services_resources().
+ * Implements hook_services_resources().
  */
 function services_menu_services_resources() {
   return array(
-   'menu' => array(
-     'retrieve' => array(
-       'help' => 'Retrieves a menu',
-       'file' => array(
-         'type' => 'inc',
-         'module' => 'services_menu', 
-         'name' => 'services_menu.resource'
-       ),
-       'callback' => '_services_menu_retrieve',
-       'access callback' => '_services_menu_access',
-       'access arguments' => array('view'),
-       'access arguments append' => TRUE,
-       'args' => array(
-         'menu_name' => array(
-           'name' => 'menu_name',
-           'type' => 'string',
-           'description' => 'The name of the menu to get',
-           'source' => array('path' => '0'),
-           'optional' => FALSE,
-         ),
-       ),
-     ),
-   ),
+    'menu' => array(
+      'retrieve' => array(
+        'help' => 'Retrieves a menu',
+        'file' => array(
+          'type' => 'inc',
+          'module' => 'services_menu',
+          'name' => 'services_menu.resource'
+        ),
+        'callback' => '_services_menu_retrieve',
+        'access callback' => '_services_menu_access',
+        'access arguments' => array('view'),
+        'access arguments append' => TRUE,
+        'args' => array(
+          'menu_name' => array(
+            'name' => 'menu_name',
+            'type' => 'string',
+            'description' => 'The name of the menu to get',
+            'source' => array('path' => '0'),
+            'optional' => FALSE,
+          ),
+        ),
+      ),
+    ),
   );
 }
 
@@ -55,7 +55,7 @@ function services_menu_services_resources() {
  *  Whether access is given or not.
  */
 function _services_menu_access($op = 'view', $args = array()) {
-  
+
   global $user;
   $access = FALSE;
 
@@ -63,8 +63,8 @@ function _services_menu_access($op = 'view', $args = array()) {
     case 'view':
 
       $access = user_access(SERVICES_MENU_RETRIEVE_MENU);
-      
-      if(!in_array($args['menu_name'], menu_get_names()))
+
+      if (!in_array($args['menu_name'], menu_get_names()))
         return services_error(t('Menu @menu_name could not be found', array('@menu_name' => $args['menu_name'])), 404);
 
       break;

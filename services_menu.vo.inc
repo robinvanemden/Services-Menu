@@ -1,9 +1,18 @@
 <?php
 
+/**
+ * @file
+ * Services menu Value Object, returns menu
+ * Filters out theming related values
+ * Adds path alias values
+ */
+
+filters returned fields
+
 class ServicesMenu {
   public $name;
   public $tree = array();
-  
+
   public function __construct($name) {
     $this->name = $name;
   }
@@ -12,7 +21,7 @@ class ServicesMenu {
 class ServicesMenuItem {
   public $link;
   public $children;
-  
+
   public function __construct() {
     $this->link = new ServicesMenuLink();
   }
@@ -34,7 +43,7 @@ class ServicesMenuLink {
   public $has_children;
   public $weight;
   public $depth;
-  
+
   public $options;
   public $localized_options;
 }
