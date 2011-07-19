@@ -47,12 +47,13 @@ function services_menu_services_resources() {
 /**
  * Access callback for the menu resource.
  *
- * @param string $op
- *  The operation that's going to be performed.
- * @param array $args
- *  The arguments that will be passed to the callback.
+ * @param $op
+ *   The operation that's going to be performed.
+ * @param $args
+ *   The arguments that will be passed to the callback.
+ *
  * @return bool
- *  Whether access is given or not.
+ *   Whether access is given or not.
  */
 function _services_menu_access($op = 'view', $args = array()) {
 

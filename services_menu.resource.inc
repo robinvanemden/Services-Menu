@@ -2,17 +2,18 @@
 
 /**
  * @file
- *
  * Link general menu functionalities to services module.
  */
-
 include_once 'services_menu.vo.inc';
 
 /**
  * Callback for retrieving menu resources.
  *
- * @param string $menu_name
+ * @param $menu_name
+ *   Machine name of menu that is to be retrieved
+ *
  * @return object
+ *   ServicesMenu object
  */
 function _services_menu_retrieve($menu_name) {
 
@@ -27,9 +28,12 @@ function _services_menu_retrieve($menu_name) {
 /**
  * Serializes the menu tree data.
  *
- * @param object $data
+ * @param $data
+ *   A fully built menu tree
+ *
+ * @return
+ *   Serialized menu array
  */
-
 function _services_menu_serialize_data($data) {
 
   $result = array();
