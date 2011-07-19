@@ -31,7 +31,7 @@ function services_menu_services_resources() {
         'access arguments' => array('view'),
         'access arguments append' => TRUE,
         'args' => array(
-          'menu_name' => array(
+          array(
             'name' => 'menu_name',
             'type' => 'string',
             'description' => 'The name of the menu to get',
@@ -64,7 +64,7 @@ function _services_menu_access($op = 'view', $args = array()) {
 
       $access = user_access(SERVICES_MENU_RETRIEVE_MENU);
 
-      if (!in_array($args['menu_name'], menu_get_names()))
+      if (!in_array($args[0], menu_get_names()))
         return services_error(t('Menu @menu_name could not be found', array('@menu_name' => $args['menu_name'])), 404);
 
       break;
