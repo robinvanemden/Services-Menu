@@ -5,7 +5,7 @@
  */
 function services_menu_permission() {
   return array(
-    services menu retrieve menu => array(
+    "services menu retrieve menu" => array(
       'title' => t('Get menu'),
     ),
   );
@@ -61,7 +61,7 @@ function _services_menu_access($op = 'view', $args = array()) {
   switch ($op) {
     case 'view':
 
-      $access = user_access(services menu retrieve menu);
+      $access = user_access("services menu retrieve menu");
 
       if (!in_array($args[0], menu_get_names()))
         return services_error(t('Menu @menu_name could not be found', array('@menu_name' => $args['menu_name'])), 404);
